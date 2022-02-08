@@ -20,9 +20,9 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
  * Created by jt on 6/13/20.
  */
 @RequiredArgsConstructor
-@Configuration
+/*@Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+@EnableGlobalMethodSecurity(prePostEnabled = true)*/
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
@@ -75,11 +75,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 //h2 console config
                 http.headers().frameOptions().sameOrigin();
-    }
-
-    @Bean
-    PasswordEncoder passwordEncoder(){
-        return SfgPasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 
    // @Override
